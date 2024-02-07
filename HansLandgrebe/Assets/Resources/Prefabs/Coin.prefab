@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8016338488554478755}
   - component: {fileID: 2391356828270843892}
   - component: {fileID: 3526761850921736302}
+  - component: {fileID: 8804204146990318239}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Obstacle
@@ -186,3 +187,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallLimit: -7
+--- !u!114 &8804204146990318239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211932527781598670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a66855b80bc754ab0e02aad990b5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

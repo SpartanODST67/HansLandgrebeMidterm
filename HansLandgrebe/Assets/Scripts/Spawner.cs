@@ -34,7 +34,7 @@ public class Spawner : MonoBehaviour
         while (playerCharacter.activeInHierarchy)
         {
             spawnPosition = Random.Range(-spawnRange, spawnRange);
-            spawnRoll = Random.Range(0, 100);
+            spawnRoll = Random.Range(1, 100);
             if (spawnRoll <= spawnCoinChance)
             {
                 spawnCoin(spawnPosition);
