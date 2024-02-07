@@ -7,6 +7,6 @@ public class Damagable : MonoBehaviour
 {
     private void OnDisable()
     {
-        SceneManager.LoadScene("TitleScreen");
+        SceneManager.LoadScene("TitleScene");
     }
 }
