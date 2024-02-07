@@ -6,32 +6,30 @@ using UnityEngine.UI;
 
 public class MainMenuHandler : MonoBehaviour
 {
-    [SerializeField] Image fadeImage;
-    [SerializeField] float fadeSmooth;
-    [SerializeField] Vector3 imageTargetVector;
+    [SerializeField] Image slideImage;
+    [SerializeField] float slideSmooth;
+    [SerializeField] Vector3 imageTarget;
 
     public void play()
     {
-        StartCoroutine(fadeToPlay());
+        StartCoroutine(slideToPlay());
     }
 
-    IEnumerator fadeToPlay()
+    IEnumerator slideToPlay()
     {
-        /*while (Mathf.RoundToInt(fadeImage.rectTransform.anchoredPosition.y) > imageTargetVector.y)
+        while (Mathf.RoundToInt(slideImage.rectTransform.anchoredPosition.y) > imageTarget.y)
         {
-            if (fadeImage.rectTransform.anchoredPosition.y < imageTargetVector.y)
+            if (slideImage.rectTransform.anchoredPosition.y < imageTarget.y)
             {
-                fadeImage.rectTransform.anchoredPosition = imageTargetVector;
+                slideImage.rectTransform.anchoredPosition = imageTarget;
             }
             else
             {
-                fadeImage.rectTransform.anchoredPosition = Vector3.Lerp(fadeImage.rectTransform.anchoredPosition, imageTargetVector, fadeSmooth);
+                slideImage.rectTransform.anchoredPosition = Vector3.Lerp(slideImage.rectTransform.anchoredPosition, imageTarget, slideSmooth);
                 yield return null;
             }
-        }*/
-        yield return null;
-
-        Debug.Log("Play");
+        }
+        Debug.Log("Starting");
         SceneManager.LoadScene("GameScene");
     }
 
