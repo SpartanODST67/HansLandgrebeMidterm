@@ -5,6 +5,19 @@ using UnityEngine;
 public class MoveCharacter : MonoBehaviour
 {
     [SerializeField] float movementSpeed;
+    [SerializeField] float movementRange;
+
+    private void LateUpdate()
+    {
+        if(transform.position.x > movementRange)
+        {
+            transform.position = new Vector3(movementRange, transform.position.y, 0);
+        }
+        if(transform.position.x < -movementRange)
+        {
+            transform.position = new Vector3(-movementRange, transform.position.y, 0);
+        }
+    }
 
     public void moveCharacter(float direction)
     {
