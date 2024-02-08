@@ -9,9 +9,15 @@ public class ScoreKeeper : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     private int score;
 
+    public void Start()
+    {
+        scoreSound = GetComponent<AudioSource>();
+    }
+
     public void addScore(int score)
     {
         this.score += score;
+        scoreSound.Play();
         updateScoreText();
     }
 

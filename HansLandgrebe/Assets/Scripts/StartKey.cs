@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class StartKey : MonoBehaviour
 {
-    [SerializeField] Vector3 startPosition;
+    [SerializeField] GameObject playerInput;
+    [SerializeField] GameObject spawner;
+
+    private void OnDestroy()
+    {
+        playerInput.SetActive(true);
+        spawner.SetActive(true);
+    }
 
 }
